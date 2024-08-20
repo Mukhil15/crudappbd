@@ -9,12 +9,12 @@ const app = express();
 
 //middleware
 app.use(express.json());
-app.use(cors({
+const corsConfig={
   origin:["https://crudappfront.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials:true
-}));
-
+};
+app.options("",cors(corsConfig));
 mongoose.connect(process.env.MongodbURL);
 // app.use((req, res, next) => {
 //   console.log(req.path, req.method);
