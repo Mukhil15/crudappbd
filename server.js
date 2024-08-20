@@ -3,6 +3,7 @@ import studentdetailsRoute from "./routes/studentdetailsRoute.js";
 import users from "./routes/usersRoute.js";
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
+const mongoose = require('mongoose');
 dotenv.config();
 import cors from "cors";
 const app = express();
